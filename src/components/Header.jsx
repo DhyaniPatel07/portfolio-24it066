@@ -1,36 +1,21 @@
+import { Link } from "react-router-dom";
+
 function Header({ name, role }) {
   return (
-    <>
-      <nav className="navbar">
+    <header className="header">
+      <div className="header-left">
+        <h1>{name}</h1>
+        <p>{role}</p>
+      </div>
 
-        <h2>{name}</h2>
-
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-
+      <nav className="header-nav">
+        <Link to="/">Home</Link>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <Link to="/projects">Projects</Link>
+        <Link to="/contact">Contact</Link>
       </nav>
-
-      <section className="hero">
-
-        <h1>Hi, I'm {name}</h1>
-
-        <h3>{role}</h3>
-
-        <p>
-          Passionate about building responsive websites using React.
-        </p>
-
-        <div className="buttons">
-          <button>Download Resume</button>
-          <button className="outline">Contact Me</button>
-        </div>
-
-      </section>
-    </>
+    </header>
   );
 }
 

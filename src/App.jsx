@@ -1,37 +1,12 @@
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import ProjectsPage from "./pages/ProjectsPage";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
-
-  const skills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Git"
-  ];
-
-  const projects = [
-    {
-      title: "Portfolio Website",
-      desc: "Personal portfolio built using React."
-    },
-    {
-      title: "Calculator App",
-      desc: "Calculator using HTML, CSS and JavaScript."
-    },
-    {
-      title: "Student Management",
-      desc: "Simple student management interface."
-    }
-  ];
-
   return (
     <>
       <Header
@@ -39,18 +14,11 @@ function App() {
         role="Frontend Developer | React Learner"
       />
 
-      <About
-        college="Charusat University"
-        course="B.Tech IT"
-      />
-
-      <Skills skills={skills} />
-
-      <Projects projects={projects} />
-
-      <Contact />
-
-      <Footer name="Dhyani Patel" />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
     </>
   );
 }
