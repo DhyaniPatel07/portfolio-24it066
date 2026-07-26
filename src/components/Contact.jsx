@@ -1,14 +1,4 @@
 function Contact() {
-  return (
-    <section className="section" id="contact">
-      <h2>Contact</h2>
-
-      <p><strong>Email:</strong> dhyani@gmail.com</p>
-      <p><strong>Phone:</strong> +91 9876543210</p>
-      <p><strong>GitHub:</strong> github.com/dhyanipatel</p>
-      <p><strong>LinkedIn:</strong> linkedin.com/in/dhyanipatel</p>
-    </section>
-  );
+  return <section className="contact-card"><p className="eyebrow">GET IN TOUCH</p><h1>Let&apos;s <em>Connect.</em></h1><p>I am currently looking for internship opportunities in Software Development, React Development, Python Development, and Data Analytics.</p><div className="contact-links contact-grid"><a href="mailto:dhyanipatel@gmail.com"><strong>Email</strong><span>dhyanipatel@gmail.com ↗</span></a><a href="https://github.com/DhyaniPatel07" target="_blank" rel="noreferrer"><strong>GitHub</strong><span>View profile ↗</span></a><a href="https://www.linkedin.com/in/dhyani-patel-336746323/" target="_blank" rel="noreferrer"><strong>LinkedIn</strong><span>Connect with me ↗</span></a><a href="#resume"><strong>Resume</strong><span>Available on request ↗</span></a></div></section>;
 }
-
 export default Contact;

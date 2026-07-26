@@ -1,38 +1,6 @@
-import { useState } from "react";
-import Projects from "../components/Projects";
-
 function ProjectsPage() {
-  const [showProjects, setShowProjects] = useState(true);
-
-  const projects = [
-    {
-      title: "Portfolio Website",
-      desc: "Personal portfolio built using React.",
-    },
-    {
-      title: "Calculator App",
-      desc: "Calculator using HTML, CSS and JavaScript.",
-    },
-    {
-      title: "Student Management",
-      desc: "Simple student management interface.",
-    },
-  ];
-
-  return (
-    <div className="page">
-      <h1 className="page-title">My Projects</h1>
-
-      <button
-        className="toggle-btn"
-        onClick={() => setShowProjects(!showProjects)}
-      >
-        {showProjects ? "Hide Projects" : "Show Projects"}
-      </button>
-
-      {showProjects && <Projects projects={projects} />}
-    </div>
-  );
+  const stack = ["React", "Python", "REST API", "Speech Recognition", "Translation API", "Text-to-Speech"];
+  const features = ["Speech-to-Text", "Language Translation", "Text-to-Speech", "Responsive Interface"];
+  return <div className="page work-page"><section className="page-intro"><p className="eyebrow">SELECTED WORK</p><h1>One project, built with <em>purpose.</em></h1><p>A practical application of frontend development, APIs and language technology.</p></section><article className="work-card"><div className="work-card-top"><p className="eyebrow">FEATURED PROJECT · 01</p><span className="project-status">In development</span></div><h2>Multilingual Voice Translation System</h2><p className="work-description">A multilingual voice translation application developed using React, Python, and REST APIs that converts speech into text, translates it into multiple languages, and converts translated text back into speech.</p><div className="work-details"><div><h3>Tech stack</h3><div className="skills compact">{stack.map((item) => <span key={item}>{item}</span>)}</div></div><div><h3>Key features</h3><ul>{features.map((feature) => <li key={feature}>{feature}</li>)}</ul></div></div><div className="work-actions"><a className="button button-primary" href="https://github.com/Pruthvi-220607/SGP4" target="_blank" rel="noreferrer">View Repository <span>↗</span></a><a className="button button-outline" href="#project-links">Live Demo <span>↗</span></a></div><p className="placeholder-note" id="project-links">Open the repository to explore the source code. A live demo link can be added when the project is published.</p></article><section className="internship-section"><p className="eyebrow">LEARNING EXPERIENCE</p><div><h2>Data Analytics Internship <em>(Training)</em></h2><p>Completed training in Python, Data Analytics, preprocessing, visualization, and software development workflows.</p></div></section></div>;
 }
-
 export default ProjectsPage;
